@@ -6,7 +6,7 @@
 # under the terms of the MIT License; see LICENSE file for more details.
 
 
-"""Graph Serializer."""
+"""Graph persistence."""
 
 import json
 
@@ -80,7 +80,7 @@ class JSONGraphConverter(object):
             graph (igraph.Graph): Graph to be saved.
 
         Returns:
-            Dict: The transformed graph as dict.
+            Dict: The graph as dict.
 
         See:
             For more information about the `json-graph-specitication`, please, see the

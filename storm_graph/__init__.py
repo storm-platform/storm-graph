@@ -8,6 +8,8 @@
 """A helper library in Python to persist iGraph graphs in JSON using the json-graph-specification"""
 
 from .version import __version__
+
+from .manager import GraphManager
 from .persistence import JSONGraphConverter
 
-__all__ = ("__version__", "JSONGraphConverter")
+__all__ = ("__version__", "GraphManager", "JSONGraphConverter")
