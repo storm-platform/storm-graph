@@ -1,0 +1,53 @@
+{
+  "graph": {
+    "directed": true,
+    "type": "Directed Acyclic Graph",
+    "nodes": {
+      "wt410zkq75": {
+        "metadata": {
+          "files": [
+            {
+              "type": "input",
+              "key": "input.txt",
+              "checksum": "....."
+            },
+            {
+              "type": "output",
+              "key": "output.txt",
+              "checksum": "....."
+            }
+          ]
+        }
+      },
+      "tw041qkz57": {
+        "metadata": {
+          "files": [
+            {
+              "type": "input",
+              "key": "output.txt",
+              "checksum": "....."
+            },
+            {
+              "type": "output",
+              "key": "output_v2.txt",
+              "checksum": "....."
+            }
+          ]
+        }
+      }
+    },
+    "edges": [
+      {
+        "source": "wt410zkq75",
+        "target": "tw041qkz57",
+        "metadata": {
+          "related_files": [
+            {
+              "key": "input.txt"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
