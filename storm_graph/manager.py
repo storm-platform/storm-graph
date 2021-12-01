@@ -10,7 +10,7 @@ from pydash import py_
 from igraph import Graph
 from copy import deepcopy
 
-from .models import Vertex, Edge
+from .models import Vertex
 
 
 class GraphManager:

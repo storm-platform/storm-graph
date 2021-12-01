@@ -12,4 +12,14 @@ from .version import __version__
 from .manager import GraphManager
 from .persistence import JSONGraphConverter
 
-__all__ = ("__version__", "GraphManager", "JSONGraphConverter")
+from .helper import graph_json_from_manager, graph_manager_from_json
+
+__all__ = (
+    "__version__",
+    # Principal feature operators
+    "GraphManager",
+    "JSONGraphConverter",
+    # Helpers
+    "graph_json_from_manager",
+    "graph_manager_from_json",
+)
