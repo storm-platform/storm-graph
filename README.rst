@@ -21,7 +21,7 @@
 .. image:: https://img.shields.io/github/license/storm-platform/storm-graph-json.svg
         :target: https://github.com/storm-platform/storm-graph-json/blob/master/LICENSE
 
-A helper library in Python to persist iGraph graphs in JSON using the json-graph-specification
+A helper library in Python to manage iGraph.graph.
 
 TODO: Please provide feature overview of module
 

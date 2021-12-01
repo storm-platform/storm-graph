@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2021 Storm Project.
 #
-# storm-graph-json is free software; you can redistribute it and/or modify it
+# storm-graph is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
 """A helper library in Python to persist iGraph graphs in JSON using the json-graph-specification"""
@@ -31,15 +31,14 @@ install_requires = ["igraph>=0.9.8,<1", "jsonschema>=4.2.1,<4.5", "pydash>=5.1.0
 
 packages = find_packages()
 
-
 # Get the version string. Cannot be done with import!
 g = {}
-with open(os.path.join("storm_graph_json", "version.py"), "rt") as fp:
+with open(os.path.join("storm_graph", "version.py"), "rt") as fp:
     exec(fp.read(), g)
     version = g["__version__"]
 
 setup(
-    name="storm-graph-json",
+    name="storm-graph",
     version=version,
     description=__doc__,
     long_description=readme + "\n\n" + history,

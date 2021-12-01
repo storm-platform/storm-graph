@@ -10,7 +10,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/storm-platform/storm-graph-json/issues.
+Report bugs at https://github.com/storm-platform/storm-graph/issues.
 
 If you are reporting a bug, please include:
 

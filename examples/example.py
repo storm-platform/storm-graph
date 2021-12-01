@@ -2,11 +2,11 @@
 #
 # Copyright (C) 2021 Storm Project.
 #
-# storm-graph-json is free software; you can redistribute it and/or modify it
+# storm-graph is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
 import json
-from storm_graph_json import JSONGraphConverter
+from storm_graph import JSONGraphConverter
 
 #
 # 1. Load example graph data
