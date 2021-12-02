@@ -12,11 +12,13 @@ from . import JSONGraphConverter
 from .manager import GraphManager
 
 
-def graph_manager_from_json(json_obj: Dict) -> GraphManager:
+def graph_manager_from_json(json_obj: Dict, validate=True) -> GraphManager:
     """Create a graph manager based on a graph serialized as json object.
 
     Args:
         json_obj (Dict): Dict with a graph in the `json-graph-specification` schema.
+
+        validate (boolean): Flag to enable the json schema validation.
 
     Returns:
         storm_graph.manager.GraphManager: GraphManager instance.
@@ -27,16 +29,18 @@ def graph_manager_from_json(json_obj: Dict) -> GraphManager:
     """
 
     # parsing the json object as igraph.Graph
-    graph_obj = JSONGraphConverter.from_json(json_obj)
+    graph_obj = JSONGraphConverter.from_json(json_obj, validate)
 
     return GraphManager(graph_obj)
 
 
-def graph_json_from_manager(graph_manager: GraphManager) -> Dict:
+def graph_json_from_manager(graph_manager: GraphManager, validate=True) -> Dict:
     """Create a graph serialized as json object from graph_manager.
 
     Args:
         graph_manager (storm_graph.manager.GraphManager): GraphManager instance.
+
+        validate (boolean): Flag to enable the json schema validation.
 
     Returns:
         Dict: Dict with a graph in the `json-graph-specification` schema.
@@ -47,7 +51,7 @@ def graph_json_from_manager(graph_manager: GraphManager) -> Dict:
     """
 
     graph_obj = graph_manager.graph
-    return JSONGraphConverter.to_json(graph_obj)
+    return JSONGraphConverter.to_json(graph_obj, validate)
 
 
 __all__ = ("graph_json_from_manager", "graph_manager_from_json")

@@ -30,11 +30,13 @@ class JSONGraphConverter(object):
     """
 
     @staticmethod
-    def from_json(data: Dict) -> Union[Graph, None]:
+    def from_json(data: Dict, validate=True) -> Union[Graph, None]:
         """Save a graph to a persistence store into a JSON file.
 
         Args:
             data (Dict): Dict in the `json-graph-specification` format that will be transformed into `igraph.Graph`.
+
+            validate (boolean): Flag to enable the json schema validation.
 
         Returns:
             Union[igraph.Graph, None]: `igraph.Graph` loaded or None.
@@ -45,7 +47,8 @@ class JSONGraphConverter(object):
             https://github.com/jsongraph/json-graph-specification
         """
         # validating the json document schema
-        validate_schema(data)
+        if validate:
+            validate_schema(data)
 
         # Extract data
         nodes = py_.get(data, "graph.nodes", {})
@@ -60,7 +63,7 @@ class JSONGraphConverter(object):
             node_data = py_.get(nodes, node_name, {})
             node_metadata = py_.get(node_data, "metadata", {})
 
-            g.add_vertex(name=node_name, **node_metadata)
+            g.add_vertex(name=node_name, **dict(metadata=node_metadata))
 
         # adding edges
         for edge in edges:
@@ -73,11 +76,13 @@ class JSONGraphConverter(object):
         return g
 
     @staticmethod
-    def to_json(graph: Graph) -> Dict:
+    def to_json(graph: Graph, validate=True) -> Dict:
         """Transform a `igraph.Graph` in a JSON Document following the `json-graph-specification`.
 
         Args:
             graph (igraph.Graph): Graph to be saved.
+
+            validate (boolean): Flag to enable the json schema validation.
 
         Returns:
             Dict: The graph as dict.
@@ -118,7 +123,8 @@ class JSONGraphConverter(object):
         }
 
         # validating the graph document
-        validate_schema(graph_json)
+        if validate:
+            validate_schema(graph_json)
 
         return graph_json
 

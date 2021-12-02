@@ -119,7 +119,7 @@ class GraphManager:
         if self._graph:
             selected_vertex = self._graph.vs.select(name=name)
 
-        if len(selected_vertex) == 1:
+        if selected_vertex and len(selected_vertex) == 1:
             vertex = selected_vertex[0]
 
             if include_neighbors:
