@@ -89,12 +89,9 @@ class JSONGraphConverter(object):
         """
         # add vertex
         nodes = {
-            py_.get(node, "name"): {
-                # converting attributes to avoid type errors
-                "metadata": py_.omit(
-                    json.loads(json.dumps(node.attributes(), default=str)), "name"
-                )
-            }
+            py_.get(node, "name"): py_.omit(
+                json.loads(json.dumps(node.attributes(), default=str)), "name"
+            )
             for node in graph.vs
         }
 
