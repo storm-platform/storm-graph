@@ -64,7 +64,15 @@ class GraphManager:
 
                     if vertex_l1 != vertex_l2:
                         if not set(vertex_l2_files).isdisjoint(vertex_l1_files):
-                            self._graph.add_edge(vertex_l1, vertex_l2)
+
+                            # checking if the edge is already defined
+                            if py_.sort(
+                                [vertex_l1.index, vertex_l2.index]
+                            ) not in py_.map(
+                                list(self._graph.es),
+                                lambda x: py_.sort([x.source, x.target]),
+                            ):
+                                self._graph.add_edge(vertex_l1, vertex_l2)
 
     def add_vertex(self, vertex: Vertex):
         """Add vertex metadata to the graph.
