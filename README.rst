@@ -9,8 +9,16 @@
  Storm Graph
 =============
 
-.. image:: https://github.com/storm-platform/storm-graph-json/workflows/CI/badge.svg
-        :target: https://github.com/storm-platform/storm-graph-json/actions?query=workflow%3ACI
+.. image:: https://img.shields.io/badge/license-MIT-green
+        :target: https://github.com/storm-platform/storm-graph-json/blob/master/LICENSE
+        :alt: Software License
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+        :target: https://github.com/psf/black
+
+.. image:: https://img.shields.io/badge/lifecycle-maturing-blue.svg
+        :target: https://www.tidyverse.org/lifecycle/#maturing
+        :alt: Software Life Cycle
 
 .. image:: https://img.shields.io/github/tag/storm-platform/storm-graph-json.svg
         :target: https://github.com/storm-platform/storm-graph-json/releases
@@ -18,8 +26,9 @@
 .. image:: https://img.shields.io/pypi/dm/storm-graph-json.svg
         :target: https://pypi.python.org/pypi/storm-graph-json
 
-.. image:: https://img.shields.io/github/license/storm-platform/storm-graph-json.svg
-        :target: https://github.com/storm-platform/storm-graph-json/blob/master/LICENSE
+.. image:: https://img.shields.io/discord/689541907621085198?logo=discord&logoColor=ffffff&color=7389D8
+        :target: https://discord.com/channels/689541907621085198#
+        :alt: Join us at Discord
 
 About
 =====
