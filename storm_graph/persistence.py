@@ -5,7 +5,6 @@
 # storm-graph is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-
 """Graph persistence."""
 
 import json
@@ -15,7 +14,7 @@ from pydash import py_
 from igraph import Graph
 from typing import Dict, Union
 
-from .schema import validate_schema
+from storm_graph.schema import validate_schema
 
 
 class JSONGraphConverter(object):

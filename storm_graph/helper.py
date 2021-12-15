@@ -5,11 +5,10 @@
 # storm-graph is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-
 from typing import Dict
 
-from . import JSONGraphConverter
-from .manager import GraphManager
+from storm_graph.manager import GraphManager
+from storm_graph.persistence import JSONGraphConverter
 
 
 def graph_manager_from_json(json_obj: Dict, validate=True) -> GraphManager:

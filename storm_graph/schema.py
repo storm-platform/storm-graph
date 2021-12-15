@@ -16,7 +16,7 @@ from pkg_resources import resource_string
 
 def _schema_from_resource() -> Dict:
     """Load a schema from the package resources."""
-    from .config import SchemaResourceConfig
+    from storm_graph.config import SchemaResourceConfig
 
     _path = (
         Path(SchemaResourceConfig.SCHEMA_RESOURCE_DIRECTORY)

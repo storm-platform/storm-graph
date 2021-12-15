@@ -11,7 +11,7 @@ from abc import ABC
 from typing import Dict, List
 from collections import UserDict
 
-from .serializer import DictSerializable
+from storm_graph.models.serializer import DictSerializable
 
 
 class BaseGraphElement(UserDict, DictSerializable, ABC):
