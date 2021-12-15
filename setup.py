@@ -51,7 +51,7 @@ setup(
     license="MIT",
     author="Felipe Menino Carlos",
     author_email="felipe.carlos@inpe.br",
-    url="https://github.com/storm-platform/storm-graph-json",
+    url="https://github.com/storm-platform/storm-graph",
     packages=packages,
     zip_safe=False,
     include_package_data=True,
